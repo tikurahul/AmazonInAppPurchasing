@@ -19,7 +19,7 @@
         var inAppPurchasing = new AmazonInAppPurchasing();
         
         inAppPurchasing.initialize(function(response) {
-          console.log("Initializing In App Purchasing SDK");
+          console.log('Initializing In App Purchasing SDK');
           // check if the sdk is available
           var isSdkAvailable = response['isSdkAvailable'];
           $status.append('<p>' + JSON.stringify(response) + '</p>');
