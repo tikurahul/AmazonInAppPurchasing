@@ -85,8 +85,7 @@ public class AmazonPurchasingObserver extends PurchasingObserver {
     }
 
     final String requestId = userIdResponse.getRequestId();
-    final String callbackId = requestCallbacks.get(requestId);
-
+    final String callbackId = requestCallbacks.remove(requestId);
     try {
       final JSONObject jobj = new JSONObject();
       final GetUserIdRequestStatus userIdRequestStatus = userIdResponse.getUserIdRequestStatus();
@@ -148,6 +147,7 @@ public class AmazonPurchasingObserver extends PurchasingObserver {
       // should never happen
       throw new AmazonInAppException("'null' purchase updates response.");
     }
+
     final String requestId = purchaseUpdatesResponse.getRequestId();
     final String callbackId = requestCallbacks.remove(requestId);
     try {
