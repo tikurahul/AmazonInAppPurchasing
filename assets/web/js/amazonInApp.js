@@ -1,4 +1,4 @@
-;(function(context) { 
+;(function(context) {
 
   var AmazonInAppPurchasing = function() {},
       serviceName = 'AmazonInAppPurchasing';
@@ -11,7 +11,7 @@
   };
 
   /**
-    Gets the logged in user Amazon Customer Id 
+    Gets the logged in user Amazon Customer Id
   */
   AmazonInAppPurchasing.prototype.getUserId = function (callback, errback) {
     cordova.exec(callback, errback, serviceName, 'userId', []);
@@ -23,7 +23,7 @@
   // skus = an array of skus
   // e.g. [sku1, sku2]
   AmazonInAppPurchasing.prototype.getItemData = function (skus, callback, errback) {
-    cordova.exec(callback, errback, serviceName, 'itemData', [JSON.stringify(skus)]);
+    cordova.exec(callback, errback, serviceName, 'itemData', [skus]);
   };
 
   /**
