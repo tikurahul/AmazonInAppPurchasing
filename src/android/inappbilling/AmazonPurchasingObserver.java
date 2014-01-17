@@ -98,7 +98,6 @@ public class AmazonPurchasingObserver extends PurchasingObserver {
       pluginInResult.setKeepCallback(false);
       plugin.webView.sendPluginResult(pluginInResult, callbackId);
     } catch (final JSONException e) {
-        Log.d("MINE", e.getMessage());
         final PluginResult pluginInResult = new PluginResult(Status.JSON_EXCEPTION);
         pluginInResult.setKeepCallback(false);
         plugin.webView.sendPluginResult(pluginInResult, callbackId);
@@ -128,7 +127,6 @@ public class AmazonPurchasingObserver extends PurchasingObserver {
 
   @Override
   public void onPurchaseResponse(final PurchaseResponse purchaseResponse) {
-      Log.d("MINE", "Purchase response");
     if (purchaseResponse == null) {
       // should never happen
       throw new AmazonInAppException("'null' purchase response.");
@@ -139,7 +137,6 @@ public class AmazonPurchasingObserver extends PurchasingObserver {
     try {
       final AmazonPurchaseResponse amazonPurchaseResponse = new AmazonPurchaseResponse(purchaseResponse);
       final PluginResult pluginResult = new PluginResult(Status.OK, amazonPurchaseResponse.toJSON());
-        Log.d("MINE", amazonPurchaseResponse.toJSON().toString());
       pluginResult.setKeepCallback(false);
       plugin.webView.sendPluginResult(pluginResult, callbackId);
     } catch (final JSONException e) {
@@ -178,7 +175,6 @@ public class AmazonPurchasingObserver extends PurchasingObserver {
         jobj.put("isSdkAvailable", isSdkAvailable);
         // update the sdk available response
         sdkAvailableResponse = jobj;
-        Log.d("MINE", jobj.toString());
         final PluginResult pluginInResult = new PluginResult(Status.OK, jobj);
         pluginInResult.setKeepCallback(false);
         plugin.webView.sendPluginResult(pluginInResult, this.initCallbackId);

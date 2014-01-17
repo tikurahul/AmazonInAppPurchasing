@@ -121,8 +121,6 @@ public class AmazonInAppPurchasing extends CordovaPlugin {
         return result;
     }
     public void echo(boolean success, JSONObject msg) {
-        Log.d("MINE", msg.toString());
-
         if (success){
             callbackContext.success(msg);
         }
