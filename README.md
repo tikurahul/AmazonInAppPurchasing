@@ -1,7 +1,7 @@
-Amazon In-App Purchasing SDK (Phonegap 2.0 Plugin)
+Amazon In-App Purchasing SDK (Phonegap 3.0 Plugin)
 ==================================================
 
-This project is a Phonegap 2.0 plugin, for the Amazon Appstore for Android's In-App Purchasing SDK.
+This project is a Phonegap 3.0 plugin, for the Amazon Appstore for Android's In-App Purchasing SDK.
 
 To get started:
 
