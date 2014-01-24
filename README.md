@@ -10,10 +10,6 @@ To get started:
 3. adb push ./assets/amazon.sdktester.json /mnt/sdcard. (Copy the amazon.sdktester.json file in the assets folder to /mnt/sdcard)
 4. git clone this project, and build / run it to play with the plugin.
 
-Here is a screenshot representing the purchase flow.
-
-![Purchase flow screenshot](https://github.com/tikurahul/AmazonInAppPurchasing/raw/master/assets/sdk_purchase.png "Screenshot for the purchase flow")
-
 License (The MIT License)
 =========================
 
