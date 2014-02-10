@@ -8,19 +8,21 @@
 
 	<license>MIT</license>
 
-  	<engines>
-	  	<engine name="cordova" version=">=3.0.0" />
-  	</engines>
+	<engines>
+		<engine name="cordova" version=">=3.1.0" />
+	</engines>
 
-	<platform name="android">
+	<platform name="amazon-fireos">
 		<js-module src="www/amazonInApp.js" name="AmazonInAppPurchasing">
 			<clobbers target="AmazonInAppPurchasing" />
 		</js-module>
-		<config-file target="config.xml" parent="/*">
-	  		<feature name="AmazonInAppPurchasing" >
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="AmazonInAppPurchasing" >
 				<param name="android-package" value="com.rahulrav.cordova.amazon.plugin.AmazonInAppPurchasing"/>
 			</feature>
 		</config-file>
+
 		<!-- In-app Billing Library -->
 		<source-file src="src/android/in-app-purchasing-1.0.3.jar" target-dir="libs" />
 		<!-- cordova plugin src files -->
