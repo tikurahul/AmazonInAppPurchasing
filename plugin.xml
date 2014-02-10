@@ -23,6 +23,14 @@
 			</feature>
 		</config-file>
 
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<receiver android:name="com.amazon.inapp.purchasing.ResponseReceiver">
+				<intent-filter>
+					<action android:name="com.amazon.inapp.purchasing.NOTIFY" android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY" />
+				</intent-filter>
+			</receiver>
+		</config-file>
+
 		<!-- In-app Billing Library -->
 		<source-file src="src/android/in-app-purchasing-1.0.3.jar" target-dir="libs" />
 		<!-- cordova plugin src files -->
