@@ -6,8 +6,8 @@ This project is a Phonegap 3.0 plugin, for the Amazon Appstore for Android's In-
 To get started:
 
 1. Go to developer.amazon.com, and download the In-App purchasing sdk, and the Amazon SDK Tester.
-2. adb install -r AmazonSDKTester.apk (the Amazon Appstore SDK Tester)
-3. adb push ./assets/amazon.sdktester.json /mnt/sdcard. (Copy the amazon.sdktester.json file in the assets folder to /mnt/sdcard)
+2. `adb install -r AmazonSDKTester.apk` (the Amazon Appstore SDK Tester)
+3. `adb push ./assets/amazon.sdktester.json /mnt/sdcard/`. (Copy the amazon.sdktester.json file in the assets folder to /mnt/sdcard)
 4. git clone this project, and build / run it to play with the plugin.
 
 License (The MIT License)
