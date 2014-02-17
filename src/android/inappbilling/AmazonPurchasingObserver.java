@@ -116,11 +116,12 @@ public class AmazonPurchasingObserver extends PurchasingObserver {
     try {
       final AmazonItemDataResponse amazonItemDataResponse = new AmazonItemDataResponse(itemDataResponse);
       final PluginResult pluginResult = new PluginResult(Status.OK, amazonItemDataResponse.toJSON());
-      plugin.onMessage(callbackId, pluginResult);
-
+      pluginResult.setKeepCallback(false);
+      plugin.webView.sendPluginResult(pluginResult, callbackId);
     } catch (final JSONException e) {
       final PluginResult pluginInResult = new PluginResult(Status.JSON_EXCEPTION);
-      plugin.onMessage(callbackId, pluginInResult);
+      pluginInResult.setKeepCallback(false);
+      plugin.webView.sendPluginResult(pluginInResult, callbackId);
     }
 
   }
