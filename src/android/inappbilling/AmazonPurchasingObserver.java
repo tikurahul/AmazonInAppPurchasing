@@ -169,11 +169,11 @@ public class AmazonPurchasingObserver extends PurchasingObserver {
   }
 
   @Override
-  public void onSdkAvailable(final boolean isSdkAvailable) {
+  public void onSdkAvailable(final boolean isSandboxMode) {
     isInitialized = true;
     try {
         final JSONObject jobj = new JSONObject();
-        jobj.put("isSdkAvailable", isSdkAvailable);
+        jobj.put("isSandboxMode", isSandboxMode);
         // update the sdk available response
         sdkAvailableResponse = jobj;
         final PluginResult pluginInResult = new PluginResult(Status.OK, jobj);
