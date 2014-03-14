@@ -47,7 +47,7 @@ public class AmazonInAppPurchasing extends CordovaPlugin {
                 // prevent repeated initialization
                 if (purchaseObserver.isAlreadyInitialized()) {
                     // send the old response back
-                    callbackContext.sendPluginResult(new PluginResult(Status.ERROR, purchaseObserver.sdkAvailableResponse()));
+                    callbackContext.sendPluginResult(new PluginResult(Status.OK, purchaseObserver.sdkAvailableResponse()));
                 }
 
                 // sdk initialization request
